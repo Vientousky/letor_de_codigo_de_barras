@@ -1,0 +1,16 @@
+[
+  {
+    "code": "4065454863614",
+    "img": "zapatillas_puma.jpeg",
+    "product": "Zapatillas puma",
+    "description": "Unas zapatillas blancas detalle 45 ",
+    "amount": 45000
+  },
+  {
+    "code": "7791293044491",
+    "img": "sprite.jpeg",
+    "product": "Spriteee",
+    "description": "1 litro y medio ",
+    "amount": 4500.0
+  }
+]
