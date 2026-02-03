@@ -1,3 +1,4 @@
+import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:codigo_de_barras/components/generic_product.dart';
 import 'package:codigo_de_barras/components/generic_product_control.dart';
 import 'package:codigo_de_barras/components/generic_search.dart';
@@ -5,14 +6,14 @@ import 'package:codigo_de_barras/core/sqlite/dynamic_product.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:flutter/material.dart';
 
-class PriceControl extends StatefulWidget {
-  const PriceControl({super.key});
+class StockControl extends StatefulWidget {
+  const StockControl({super.key});
 
   @override
-  State<PriceControl> createState() => _PriceControlState();
+  State<StockControl> createState() => _StockControlState();
 }
 
-class _PriceControlState extends State<PriceControl> {
+class _StockControlState extends State<StockControl> {
   List<GenericProduct> _allProducts = [];
   List<GenericProduct> _filteredProducts = [];
   bool _loading = true;
@@ -46,7 +47,7 @@ class _PriceControlState extends State<PriceControl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Controlar de precios")),
+      appBar: GenericBar(title: "Control de stock", showConfig: true,),
 
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -58,9 +59,7 @@ class _PriceControlState extends State<PriceControl> {
               const Expanded(child: Center(child: CircularProgressIndicator()))
             else if (_filteredProducts.isEmpty)
               const Expanded(
-                child: Center(
-                  child: Text("El precio que busca no se a encontrado"),
-                ),
+                child: Center(child: Text("Lo que buscaba no se encontro")),
               )
             else
               Container(
@@ -74,7 +73,7 @@ class _PriceControlState extends State<PriceControl> {
                   ),
                   child: GenericProductControl(
                     title: "Productos",
-                    category: "pr1",
+                    category: "Cnt",
                     items: _filteredProducts,
                     itemBuilder: (context, product) {
                       return Padding(
@@ -90,7 +89,7 @@ class _PriceControlState extends State<PriceControl> {
                               ),
                             ),
                             Text(
-                              "${product.precio}",
+                              "4",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,

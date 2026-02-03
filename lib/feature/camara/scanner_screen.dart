@@ -1,3 +1,4 @@
+import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
@@ -14,7 +15,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Escanear código")),
+      appBar: GenericBar(title: "Escaneado codigo", showConfig: true),
       body: MobileScanner(
         onDetect: (BarcodeCapture capture) {
           if (scanned) return;

@@ -19,12 +19,12 @@ class LabelDetails extends StatelessWidget {
           children: [
             Text(
               "\$${product!.precio}",
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 4),
             Text(
               product!.nombre,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 12),
             BarcodeWidget(

@@ -1,8 +1,9 @@
-import 'package:codigo_de_barras/core/camera/scan_camera_screen.dart';
+import 'package:codigo_de_barras/feature/camara/scanner_screen.dart';
 import 'package:codigo_de_barras/core/sqlite/get_product_by_code.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:codigo_de_barras/core/themes/button_styles.dart';
-import 'package:codigo_de_barras/detalles_producto/product_details_screen.dart';
+import 'package:codigo_de_barras/core/themes/text_styles.dart';
+import 'package:codigo_de_barras/feature/detalles_producto/product_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class SelectScanner extends StatelessWidget {
@@ -18,10 +19,7 @@ class SelectScanner extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            const Text(
-              "¿Como quieres escanear?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-            ),
+            Text("¿Como quieres escanear?", style: TextStyles.text70(context)),
             const SizedBox(height: 12),
             Row(
               children: [
@@ -31,7 +29,7 @@ class SelectScanner extends StatelessWidget {
                       final codigo = await Navigator.push<String>(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => const ScanCameraScreen(),
+                          builder: (_) => const ScannerScreen(),
                         ),
                       );
 
@@ -43,8 +41,14 @@ class SelectScanner extends StatelessWidget {
 
                       if (product == null) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Producto no encontrado'),
+                          SnackBar(
+                            content: Text(
+                              'Producto no encontrado',
+                              style: TextStyles.text50(context),
+                            ),
+                            backgroundColor: Theme.of(
+                              context,
+                            ).colorScheme.surface,
                           ),
                         );
                         return;

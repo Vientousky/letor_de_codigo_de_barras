@@ -1,5 +1,6 @@
 import 'package:codigo_de_barras/core/themes/button_styles.dart';
-import 'package:codigo_de_barras/inicio/core/import_excel_to_sqlite.dart';
+import 'package:codigo_de_barras/core/themes/text_styles.dart';
+import 'package:codigo_de_barras/feature/inicio/core/import_excel_to_sqlite.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:flutter/material.dart';
 
@@ -28,10 +29,7 @@ class _AddExcelState extends State<AddExcel> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const Text(
-              "CARGAR ARCHIVO EXCEL",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-            ),
+            Text("CARGAR ARCHIVO EXCEL", style: TextStyles.text70(context)),
             const SizedBox(height: 8),
             ElevatedButton(
               onPressed: loading
@@ -51,7 +49,7 @@ class _AddExcelState extends State<AddExcel> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                   Icon(Icons.save_alt_outlined),
+                  Icon(Icons.save_alt_outlined),
                   const SizedBox(width: 8),
                   const Text("Subir archivo"),
                 ],
