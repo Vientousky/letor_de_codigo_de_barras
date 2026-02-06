@@ -31,11 +31,7 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: GenericBar(title: "Inicio", showConfig: true),
-        body: Column(
-          children: [
-            Home(),
-          ],
-        ),
+        body: Column(children: [Home()]),
       ),
     );
   }

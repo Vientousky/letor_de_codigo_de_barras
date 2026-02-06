@@ -1,9 +1,7 @@
-import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:codigo_de_barras/components/generic_product.dart';
 import 'package:codigo_de_barras/components/generic_search.dart';
-import 'package:codigo_de_barras/feature/controlar_etiquetas.dart/widgets/label_container.dart';
 import 'package:codigo_de_barras/core/sqlite/dynamic_product.dart';
-import 'package:codigo_de_barras/core/themes/text_styles.dart';
+import 'package:codigo_de_barras/feature/controlar_etiquetas.dart/widgets/label_container.dart';
 import 'package:flutter/material.dart';
 
 class LabelControl extends StatefulWidget {
@@ -47,7 +45,7 @@ class _LabelControlState extends State<LabelControl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GenericBar(title: "Control de etiquetas", showConfig: true,),
+      appBar: AppBar(title: Text("Control de etiquetas")),
       body: Padding(
         padding: EdgeInsets.all(16),
         child: Column(
@@ -57,14 +55,7 @@ class _LabelControlState extends State<LabelControl> {
             if (_loading)
               const Expanded(child: Center(child: CircularProgressIndicator()))
             else if (_filteredProducts.isEmpty)
-              Expanded(
-                child: Center(
-                  child: Text(
-                    "No hay resultado",
-                    style: TextStyles.text70(context),
-                  ),
-                ),
-              )
+              const Expanded(child: Center(child: Text("No hay resultado")))
             else
               Expanded(
                 child: ListView.builder(

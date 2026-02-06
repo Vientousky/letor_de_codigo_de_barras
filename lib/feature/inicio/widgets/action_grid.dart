@@ -1,9 +1,9 @@
 import 'package:codigo_de_barras/feature/control_de_codigo_barras/barcode_control.dart';
 import 'package:codigo_de_barras/feature/control_de_precio/price_control.dart';
 import 'package:codigo_de_barras/feature/control_stock/stock_control.dart';
-import 'package:codigo_de_barras/feature/controlar_etiquetas.dart/label_control.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:codigo_de_barras/core/themes/text_styles.dart';
+import 'package:codigo_de_barras/feature/controlar_etiquetas.dart/label_control.dart';
 import 'package:codigo_de_barras/feature/inicio/widgets/generic_button.dart';
 import 'package:flutter/material.dart';
 

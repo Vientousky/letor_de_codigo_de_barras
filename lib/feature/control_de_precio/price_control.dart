@@ -1,4 +1,3 @@
-import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:codigo_de_barras/components/generic_product.dart';
 import 'package:codigo_de_barras/components/generic_product_control.dart';
 import 'package:codigo_de_barras/components/generic_search.dart';
@@ -47,7 +46,7 @@ class _PriceControlState extends State<PriceControl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GenericBar(title: "Control de precio", showConfig: true),
+      appBar: AppBar(title: Text("Controlar de precios")),
 
       body: Padding(
         padding: const EdgeInsets.all(16),

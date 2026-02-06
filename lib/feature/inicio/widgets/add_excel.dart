@@ -1,5 +1,4 @@
 import 'package:codigo_de_barras/core/themes/button_styles.dart';
-import 'package:codigo_de_barras/core/themes/text_styles.dart';
 import 'package:codigo_de_barras/feature/inicio/core/import_excel_to_sqlite.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +28,10 @@ class _AddExcelState extends State<AddExcel> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text("CARGAR ARCHIVO EXCEL", style: TextStyles.text70(context)),
+            const Text(
+              "CARGAR ARCHIVO EXCEL",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+            ),
             const SizedBox(height: 8),
             ElevatedButton(
               onPressed: loading

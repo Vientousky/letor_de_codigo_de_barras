@@ -1,4 +1,3 @@
-import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:codigo_de_barras/components/generic_product.dart';
 import 'package:codigo_de_barras/components/generic_product_control.dart';
 import 'package:codigo_de_barras/components/generic_search.dart';
@@ -47,7 +46,7 @@ class _BarcodeControlState extends State<BarcodeControl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GenericBar(title: "Controlar codigo de barras", showConfig: true),
+      appBar: AppBar(title: Text("Controlar codigo de barras")),
 
       body: Padding(
         padding: const EdgeInsets.all(16),

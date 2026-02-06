@@ -26,13 +26,12 @@ class ButtonRouter extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: TextStyles.text70(context)),
+                Text(title, style: TextStyles.text50(context)),
 
                 if (description != null) ...[
-                  const SizedBox(height: 0),
+                  const SizedBox(height: 4),
                   Text(
                     description!,
-                    style: TextStyles.text50(context),
                   ),
                 ],
               ],

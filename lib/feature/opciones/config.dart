@@ -1,5 +1,7 @@
 import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:codigo_de_barras/feature/opciones/widgets/print_config.dart';
+import 'package:codigo_de_barras/feature/opciones/widgets/scanner_config.dart';
+import 'package:codigo_de_barras/feature/opciones/widgets/ticker_config.dart';
 import 'package:flutter/material.dart';
 
 class Config extends StatefulWidget {
@@ -20,7 +22,11 @@ class _ConfigState extends State<Config> {
           children: [
             Column(
               children: [
+                ScannerConfig(),
+                SizedBox(height: 20),
                 PrintConfig(),
+                SizedBox(height: 20),
+                TickerConfig(),
               ],
             ),
           ],
