@@ -1,7 +1,7 @@
 import 'package:codigo_de_barras/core/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'pick_excel_file.dart';
-import 'parse_excel.dart';
+import './parse_excel.dart';
 import 'insert_from_excel.dart';
 
 class ImportExcelToSqlite {

@@ -1,5 +1,5 @@
 import 'package:codigo_de_barras/core/themes/button_styles.dart';
-import 'package:codigo_de_barras/feature/inicio/core/import_excel_to_sqlite.dart';
+import 'package:codigo_de_barras/feature/inicio/core/excel/import_excel_to_sqlite.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:flutter/material.dart';
 

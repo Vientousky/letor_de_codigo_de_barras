@@ -2,14 +2,14 @@ import 'package:codigo_de_barras/components/generic_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-class ScannerScreen extends StatefulWidget {
-  const ScannerScreen({super.key});
+class BarcodeReaderWithCamera extends StatefulWidget {
+  const BarcodeReaderWithCamera({super.key});
 
   @override
-  State<ScannerScreen> createState() => _ScannerScreenState();
+  State<BarcodeReaderWithCamera> createState() => _BarcodeReaderWithCameraState();
 }
 
-class _ScannerScreenState extends State<ScannerScreen> {
+class _BarcodeReaderWithCameraState extends State<BarcodeReaderWithCamera> {
   bool scanned = false;
 
   @override
