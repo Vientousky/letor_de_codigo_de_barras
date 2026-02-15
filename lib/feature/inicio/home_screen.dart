@@ -1,6 +1,6 @@
-import 'package:codigo_de_barras/inicio/widgets/action_grid.dart';
-import 'package:codigo_de_barras/inicio/widgets/add_excel.dart';
-import 'package:codigo_de_barras/inicio/widgets/select_scanner.dart';
+import 'package:codigo_de_barras/feature/inicio/widgets/action_grid.dart';
+import 'package:codigo_de_barras/feature/inicio/widgets/add_excel.dart';
+import 'package:codigo_de_barras/feature/inicio/widgets/select_scanner.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HeroState extends State<Home> {
+  
   @override
   Widget build(BuildContext context) {
     return const Padding(

@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:codigo_de_barras/core/themes/app_colors.dart';
 
 class TextStyles {
-  static const TextStyle bodyText = TextStyle(
-    color: AppColors.lightTextPrimary,
-    fontSize: 20,
-  );
-  static const TextStyle footerText = TextStyle(
-    color: AppColors.lightTextSecundary,
-    fontSize: 16,
-  );
+  static TextStyle text70(BuildContext context) {
+    return TextStyle(
+      color: Theme.of(context).colorScheme.primary,
+      fontSize: 20,
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle text50(BuildContext context) {
+    return TextStyle(
+      color: Theme.of(context).colorScheme.primary,
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+    );
+  }
 }

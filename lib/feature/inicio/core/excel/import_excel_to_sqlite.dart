@@ -1,6 +1,7 @@
+import 'package:codigo_de_barras/core/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'pick_excel_file.dart';
-import 'parse_excel.dart';
+import './parse_excel.dart';
 import 'insert_from_excel.dart';
 
 class ImportExcelToSqlite {
@@ -38,7 +39,15 @@ class ImportExcelToSqlite {
   }
 
   static void _snack(BuildContext context, String msg) {
-    ScaffoldMessenger.of(context)
-      .showSnackBar(SnackBar(content: Text(msg)));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          msg,
+          style: TextStyles.text50(context),
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+      ),
+    );
   }
 }

@@ -1,6 +1,8 @@
-import 'package:codigo_de_barras/inicio/home_screen.dart';
+import 'package:codigo_de_barras/components/generic_bar.dart';
+import 'package:codigo_de_barras/feature/inicio/home_screen.dart';
 import 'package:codigo_de_barras/core/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -28,12 +30,8 @@ class _MyAppState extends State<MyApp> {
       darkTheme: AppTheme.darkTheme,
       themeMode: _themeMode,
       home: Scaffold(
-        appBar: AppBar(title: const Text("Inicio")),
-        body: Column(
-          children: [
-            Home(),
-          ],
-        ),
+        appBar: GenericBar(title: "Inicio", showConfig: true),
+        body: Column(children: [Home()]),
       ),
     );
   }

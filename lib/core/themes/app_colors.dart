@@ -29,8 +29,8 @@ class AppColors {
   static const Color darkAccent = Color.fromARGB(255, 24, 165, 69);
 
   //COLORES PARA LOS TEXTOS EN MODO OSCURITO
-  static const Color darkTextPrimary = Color.fromARGB(255, 213, 211, 211);
-  static const Color darkTextPrimarySecundaryL = Color.fromARGB(255, 219, 218, 218);
+  static const Color darkTextPrimary = Color.fromARGB(255, 250, 248, 248);
+  static const Color darkTextSecundary = Color.fromARGB(255, 219, 218, 218);
 
   //COLORES PARA LOS FONDOS EN MODO OSCURITO
   static const Color darkBackground = Color.fromARGB(255, 35, 35, 35);

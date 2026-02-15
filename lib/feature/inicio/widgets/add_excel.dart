@@ -1,5 +1,5 @@
 import 'package:codigo_de_barras/core/themes/button_styles.dart';
-import 'package:codigo_de_barras/inicio/core/import_excel_to_sqlite.dart';
+import 'package:codigo_de_barras/feature/inicio/core/excel/import_excel_to_sqlite.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +51,7 @@ class _AddExcelState extends State<AddExcel> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                   Icon(Icons.save_alt_outlined),
+                  Icon(Icons.save_alt_outlined),
                   const SizedBox(width: 8),
                   const Text("Subir archivo"),
                 ],

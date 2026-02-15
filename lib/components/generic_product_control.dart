@@ -1,3 +1,4 @@
+import 'package:codigo_de_barras/core/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class GenericProductControl<T> extends StatelessWidget {
@@ -36,12 +37,12 @@ class GenericProductControl<T> extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  style: TextStyles.text70(context)
                 ),
                 if (category != null)
                   Text(
                     category!,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                    style: TextStyles.text70(context)
                   ),
               ],
             ),

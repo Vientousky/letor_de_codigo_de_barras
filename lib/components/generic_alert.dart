@@ -1,5 +1,5 @@
 import 'package:codigo_de_barras/components/generic_product.dart';
-import 'package:codigo_de_barras/detalles_producto/product_details_screen.dart';
+import 'package:codigo_de_barras/feature/detalles_producto/product_details_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

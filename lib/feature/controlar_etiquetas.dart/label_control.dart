@@ -1,7 +1,7 @@
 import 'package:codigo_de_barras/components/generic_product.dart';
 import 'package:codigo_de_barras/components/generic_search.dart';
-import 'package:codigo_de_barras/controlar_etiquetas.dart/widgets/label_container.dart';
 import 'package:codigo_de_barras/core/sqlite/dynamic_product.dart';
+import 'package:codigo_de_barras/feature/controlar_etiquetas.dart/widgets/label_container.dart';
 import 'package:flutter/material.dart';
 
 class LabelControl extends StatefulWidget {

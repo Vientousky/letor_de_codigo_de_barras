@@ -1,4 +1,4 @@
-import '../sqlite/open_db.dart';
+import 'open_db.dart';
 import '../../components/generic_product.dart';
 
 class DynamicallyProductService {

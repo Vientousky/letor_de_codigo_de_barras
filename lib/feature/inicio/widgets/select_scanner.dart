@@ -1,13 +1,19 @@
-import 'package:codigo_de_barras/core/camera/scan_camera_screen.dart';
-import 'package:codigo_de_barras/core/sqlite/get_product_by_code.dart';
 import 'package:codigo_de_barras/core/themes/background.dart';
 import 'package:codigo_de_barras/core/themes/button_styles.dart';
-import 'package:codigo_de_barras/detalles_producto/product_details_screen.dart';
+import 'package:codigo_de_barras/core/themes/text_styles.dart';
+import 'package:codigo_de_barras/feature/escaner/barcode_reader_with_camera.dart';
+import 'package:codigo_de_barras/feature/inicio/core/navigator_scanner.dart';
+import 'package:codigo_de_barras/feature/escaner/physical_barcode_reader.dart';
 import 'package:flutter/material.dart';
 
-class SelectScanner extends StatelessWidget {
+class SelectScanner extends StatefulWidget {
   const SelectScanner({super.key});
 
+  @override
+  State<SelectScanner> createState() => _SelectScannerState();
+}
+
+class _SelectScannerState extends State<SelectScanner> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,47 +24,18 @@ class SelectScanner extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            const Text(
-              "¿Como quieres escanear?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-            ),
+            Text("¿Como quieres escanear?", style: TextStyles.text70(context)),
             const SizedBox(height: 12),
             Row(
               children: [
+                //ESCANER CON LA CAMARA DEL CEL
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () async {
-                      final codigo = await Navigator.push<String>(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => const ScanCameraScreen(),
-                        ),
-                      );
-
-                      if (codigo == null) return;
-
-                      final product = await GetProductByCode.call(codigo);
-
-                      if (!context.mounted) return;
-
-                      if (product == null) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Producto no encontrado'),
-                          ),
-                        );
-                        return;
-                      }
-
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) =>
-                              ProductDetailsScreen(product: product),
-                        ),
-                      );
+                    onPressed: () {
+                      NavigatorScanner(
+                        selectScanner: BarcodeReaderWithCamera(),
+                      )(context);
                     },
-                    style: GenerycButtonStyles.buttonBackground(context),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -70,9 +47,15 @@ class SelectScanner extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
+
+                //ESCANER DE LETOR DE CODIGO DE BARRAS FISICO
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      NavigatorScanner(selectScanner: PhysicalBarcodeReader())(
+                        context,
+                      );
+                    },
                     style: GenerycButtonStyles.buttonBackground(context),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

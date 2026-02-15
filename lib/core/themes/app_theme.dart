@@ -14,6 +14,7 @@ class AppTheme {
 
     colorScheme: ColorScheme.light(
       primary: AppColors.lightTextPrimary,
+      secondary: AppColors.lightTextSecundary,
       surface: AppColors.lightBackgroundComponents,
       surfaceContainerHighest: AppColors.lightBackgroundSelected,
     ),
@@ -31,6 +32,7 @@ class AppTheme {
 
     colorScheme: ColorScheme.dark(
       primary: AppColors.darkTextPrimary,
+      secondary: AppColors.darkTextSecundary,
       surface: AppColors.darkBackgroundComponents,
       surfaceContainerHighest: const Color.fromARGB(255, 111, 114, 114),
     ),
